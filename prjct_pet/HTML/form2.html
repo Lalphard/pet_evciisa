@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/BOOTSTRAP/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/CSS/form2.css">
+    <link rel="icon" href="/IMG/patita.png" />
+    <title>Document</title>
+</head>
+<body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <img src="/IMG/gatoyperro.png" alt="Bootstrap" width="60" height="60">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+            <ul class="navbar-nav mx-auto mb-5 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/HTML/Index2.html">INICIO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">PERFIL</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/HTML/Vaccine.html">VACUNAS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/HTML/Galery.html">GALERIA</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/HTML/form2.html">REGISTRAR</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="formulario">
+      <div class="title_form">
+        <h2>Registra a tu compañero!</h2>
+      </div>
+      <form class="row g-3 needs-validation" validate action="Confirm.html" method="get" id="myForm">
+        <div class="col-md-4">
+          <label for="nombremascota" class="form-label">Nombre de la mascota:</label>
+          <input type="text" class="form-control" id="nombremascota" placeholder="Pelusa" required>
+        </div>
+        <div class="col-md-4">
+          <label for="fnacimiento" class="form-label">Fecha de nacimiento:</label>
+          <input type="date" class="form-control" id="fnacimiento" required>
+        </div>
+        <div class="col-md-4">
+          <label for="raza" class="form-label">Raza:</label>
+          <input type="text" class="form-control" id="raza" placeholder="Poodle" required>
+        </div>
+        <div class="col-md-4">
+          <label for="color" class="form-label">Color:</label>
+          <input type="text" class="form-control" id="color" placeholder="Blanco" required>
+        </div>
+        <div class="col-md-3">
+          <label for="sexo" class="form-label">Sexo: </label>
+          <select class="form-select" id="sexo" required>
+            <option selected disabled value="Elige una opción">Elige una opción </option>
+            <option>Hembra</option>
+            <option>Macho</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label">Nombre de la última vacuna:</label>
+          <input type="text" class="form-control" id="validationCustom01" placeholder=" Ejemplo: Sextuple/sin vacunas" required>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustom02" class="form-label">Fecha de la última vacuna:</label>
+          <input type="date" class="form-control" id="validationCustom02" required>
+        </div>
+       
+        <div class="title_form">
+          <h2>Ahora cuéntanos sobre tí.</h2>
+        </div>
+
+        <form class="row g-3 needs-validation" novalidate>
+          <div class="col-md-4">
+            <label for="validationCustom01" class="form-label">Nombre del tutor:</label>
+            <input type="text" class="form-control" id="validationCustom01" placeholder="Cloud Strife" required>
+          </div>
+          <div class="col-md-4">
+            <label for="validationCustom02" class="form-label">Rut:</label>
+            <input type="text" class="form-control" id="validationCustom02" placeholder="12345678-9/K" pattern="^[0-9]{1,8}-[0-9kK]$" required>
+          </div>
+          <div class="col-md-4">
+            <label for="validationCustom01" class="form-label">Dirección:</label>
+            <input type="text" class="form-control" id="validationCustom01" placeholder="Siempreviva 742 Santiago" required>
+          </div>
+          <div class="col-md-4">
+            <label for="validationCustom01" class="form-label">Teléfono:</label>
+            <input type="tel" class="form-control" id="validationCustom01" placeholder="912345678" pattern="^[0-9]{9}$" required>
+          </div>
+          <div class="col-md-4">
+            <label for="validationCustom01" class="form-label">Correo:</label>
+            <input type="email" class="form-control" id="validationCustom01" placeholder="xxxxx@xxxxx.xx" pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" required>
+          </div>
+
+          <button type="button" class="btn btn-primary" id="submitBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Enviar
+          </button>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">¿Deseas enviar el Formulario?</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>Asegurate de llenar todos los campos</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Aún no</button>
+                  <button type="button" class="btn btn-primary" id="confirmBtn">Confirmar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </form>
+    </div>
+
+    <footer>
+      <div class="navFooterabout">
+        <p>Conócenos</p>
+        <ul>
+          <li class="nav_list">
+            <a href="">¿Quiénes Somos?</a>
+            <a href="">Nuestro aporte a la comunidad</a>
+            <a href="">Nuestra dirección</a>
+            <a href="">Trabaja con nosotros</a>
+          </li>
+        </ul>
+      </div>  
+    
+      <div class="navFootercontact">
+        <p>Contacto</p>
+        <ul>
+          <li class="nav_list">
+            <a href="">Correo electrónico</a>
+            <a href="">Teléfono</a>
+            <a href="">Redes sociales</a>
+            <a href="">Formulario de contacto</a>
+          </li>
+        </ul>
+      </div>  
+
+      <div class="navFooterabout">
+        <p>Conócenos</p>
+        <ul>
+          <li class="nav_list">
+            <a href="">¿Quiénes Somos?</a>
+            <a href="">Nuestro aporte a la comunidad</a>
+            <a href="">Nuestra dirección</a>
+            <a href="">Trabaja con nosotros</a>
+          </li>
+        </ul>
+      </div>  
+    
+      <div class="navFootercontact">
+        <p>Contacto</p>
+        <ul>
+          <li class="nav_list">
+            <a href="">Correo electrónico</a>
+            <a href="">Teléfono</a>
+            <a href="">Redes sociales</a>
+            <a href="">Formulario de contacto</a>
+          </li>
+        </ul>
+      </div>  
+
+      <div class="navFootercontact">
+        <p>Contacto</p>
+        <ul>
+          <li class="nav_list">
+            <a href="">Correo electrónico</a>
+            <a href="">Teléfono</a>
+            <a href="">Redes sociales</a>
+            <a href="">Formulario de contacto</a>
+          </li>
+        </ul>
+      </div>  
+    </footer>
+
+    <script src="/BOOTSTRAP/js/bootstrap.min.js"></script>
+    <script src="/JS/source.js"></script>
+</body>
+</html>
